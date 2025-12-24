@@ -7,7 +7,7 @@ HF_REPO="unsloth/GLM-4.5-Air-GGUF"
 HF_PATTERN="*IQ1_M*gguf"
 MODEL_NAME="GLM-4.5-Air-UD-IQ1_M.gguf"
 HF_CACHE="$HOME/.cache/huggingface/hub"
-DEST_DIR="$HOME/glm-4.5-air"
+DEST_DIR="$HOME/glm-4.5-air-model"
 MIN_FREE_GB=60
 
 error() {
