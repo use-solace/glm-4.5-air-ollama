@@ -58,7 +58,7 @@ Ensure [Modelfile](Modelfile) exists in the directory:
 ls Modelfile
 ```
 
-> ⚠️ If Modelfile](Modelfile) does not exist in the directory, run `mv ~/glm-4.5-air-ollama/Modelfile ./`
+> ⚠️ If [Modelfile](Modelfile) does not exist in the directory, run `mv ~/glm-4.5-air-ollama/Modelfile ./`
 
 Create the model in Ollama:
 
