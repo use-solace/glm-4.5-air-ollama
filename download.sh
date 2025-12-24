@@ -40,11 +40,10 @@ huggingface-cli download "$HF_REPO" --include "$HF_PATTERN" \
 
 info "Locating downloaded GGUF file..."
 
-mapfile -t FOUND_FILES < <(
-  find "$HF_CACHE" \
-    -type f \
-    -name "$MODEL_NAME" 2>/dev/null
-)
+FOUND_FILES=()
+while IFS= read -r file; do
+  FOUND_FILES+=("$file")
+done < <(find "$HF_CACHE" -type f -name "$MODEL_NAME" 2>/dev/null)
 
 [[ "${#FOUND_FILES[@]}" -eq 1 ]] \
   || error "Expected exactly 1 GGUF file, found ${#FOUND_FILES[@]}"
