@@ -1,0 +1,10 @@
+FROM ./GLM-4.5-Air-UD-IQ1_M.gguf
+
+TEMPLATE """{{ if .System }}<|system|>
+{{ .System }}{{ end }}<|user|>
+{{ .Prompt }}<|assistant|>"""
+
+PARAMETER stop "<|user|>"
+PARAMETER stop "<|system|>"
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
